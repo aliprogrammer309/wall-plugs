@@ -14,6 +14,11 @@ body {
   background-size: cover;
 }
 
+.logo{
+  width: 60%;
+  margin: 0 auto;
+}
+
 .container {
   /* Altere a cor de fundo da div `container` para branco */
   background-color: white;
