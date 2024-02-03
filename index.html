@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Aconselhamento de Buchas</title>
+    <title>Selecionador de Buchas</title>
   </head>
   <body>
     <div class="container">
@@ -16,12 +16,15 @@
           alt="Logo da empresa"
         />
       </div>
-      <h1>Aconselhamento de Buchas</h1>
+      <h1>Selecionador de Buchas</h1>
       <form id="cargaForm">
-        <label for="espessuraCarga">Espessura da carga:</label>
+        <label for="tipodeparede">Tipo de parede:</label>
+        <input type="text" id="tipodeparede" required />
+
+        <label for="espessuraCarga">Espessura da carga (mm):</label>
         <input type="text" id="espessuraCarga" required />
 
-        <label for="pesoCarga">Peso da carga:</label>
+        <label for="pesoCarga">Peso da carga (kg):</label>
         <input type="text" id="pesoCarga" required />
 
         <button type="button" onclick="calcularBuchas()">Calcular</button>
@@ -203,7 +206,7 @@
           <p>Nylon Brick Plug - 14x73mm</p>
         </div>
 
-        <div id="bucha25" class="bucha hidden">
+        <!-- <div id="bucha25" class="bucha hidden">
           <img src="./assets/Nylon special plug.png" alt="Nylon special Plug" />
           <p>Nylon special Plug - 6.0x40mm</p>
         </div>
@@ -216,7 +219,7 @@
         <div id="bucha27" class="bucha hidden">
           <img src="./assets/Nylon special plug.png" alt="Nylon special Plug" />
           <p>Nylon special Plug - 10x57mm</p>
-        </div>
+        </div> -->
       </div>
     </div>
 
