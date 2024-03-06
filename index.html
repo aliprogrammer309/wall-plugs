@@ -17,9 +17,18 @@
         />
       </div>
       <h1>Selecionador de Buchas</h1>
+      <h3 class="subheading">
+        Descubra qual a bucha ideal para si! Nós ajudamos!
+      </h3>
       <form id="cargaForm">
-        <label for="tipodeparede">Tipo de parede:</label>
-        <input type="text" id="tipodeparede" required />
+        <select id="tipodeparede" class="form-control" required>
+          <option value="">Selecione o tipo de parede</option>
+          <option value="Tijolo">Tijolo</option>
+          <option value="Betão C20/25">Betão C20/25</option>
+          <option value="Pedra">Pedra</option>
+          <option value="Gesso cartonado">Gesso cartonado</option>
+          <option value="Outro">Outro</option>
+        </select>
 
         <label for="espessuraCarga">Espessura da carga (mm):</label>
         <input type="text" id="espessuraCarga" required />
@@ -205,24 +214,15 @@
           </video>
           <p>Nylon Brick Plug - 14x73mm</p>
         </div>
-
-        <!-- <div id="bucha25" class="bucha hidden">
-          <img src="./assets/Nylon special plug.png" alt="Nylon special Plug" />
-          <p>Nylon special Plug - 6.0x40mm</p>
-        </div>
-
-        <div id="bucha26" class="bucha hidden">
-          <img src="./assets/Nylon special plug.png" alt="Nylon special Plug" />
-          <p>Nylon special Plug - 8.0x47mm</p>
-        </div>
-
-        <div id="bucha27" class="bucha hidden">
-          <img src="./assets/Nylon special plug.png" alt="Nylon special Plug" />
-          <p>Nylon special Plug - 10x57mm</p>
-        </div> -->
       </div>
     </div>
-
+    <div class="footer">
+      <p>
+        O selecionador de buchas é um simulador meramente indicativo. Deve
+        testar sempre antes da aplicação com os produtos reais que vai utilizar
+        de forma a comprovar os resultados pretendidos.
+      </p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

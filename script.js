@@ -173,27 +173,6 @@ const plugs = [
     length: 73,
     weightRange: [260, 390],
   },
-  // {
-  //   id: "bucha25",
-  //   model: "Nylon special Plug",
-  //   dimensions: "6.0x40mm",
-  //   length: 40,
-  //   weightRange: [70, 100],
-  // },
-  // {
-  //   id: "bucha26",
-  //   model: "Nylon special Plug",
-  //   dimensions: "8.0x47mm",
-  //   length: 47,
-  //   weightRange: [100, 140],
-  // },
-  // {
-  //   id: "bucha27",
-  //   model: "Nylon special Plug",
-  //   dimensions: "10x57mm",
-  //   length: 57,
-  //   weightRange: [140, 180],
-  // },
 ];
 
 function calcularBuchas() {
