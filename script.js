@@ -175,37 +175,83 @@ const plugs = [
   },
 ];
 
+// function calcularBuchas() {
+//   var espessuraCarga = parseFloat(
+//     document.getElementById("espessuraCarga").value
+//   );
+//   var pesoCarga = parseFloat(document.getElementById("pesoCarga").value);
+//   var suitablePlugs = [];
+
+//   // Check if input fields are empty
+//   if (isNaN(espessuraCarga) || isNaN(pesoCarga)) {
+//     alert("Por favor, preencha ambos os campos de entrada.");
+//     return; // Exit the function if fields are empty
+//   }
+
+//   // Find suitable plugs
+//   plugs.forEach((plug) => {
+//     if (
+//       pesoCarga >= plug.weightRange[0] &&
+//       pesoCarga <= plug.weightRange[1] &&
+//       espessuraCarga * 4 <= plug.length
+//     ) {
+//       console.log(`Poderá ver a ${plug.model} - ${plug.dimensions}`);
+//       suitablePlugs.push(plug.id);
+//     }
+//   });
+
+//   // Check if no suitable plugs were found
+//   if (suitablePlugs.length === 0) {
+//     alert("Nenhuma bucha adequada foi encontrada com os valores fornecidos.");
+//   }
+
+//   // Update display
+//   atualizarExibicaoBuchas(suitablePlugs);
+// }
+
+// function atualizarExibicaoBuchas(suitablePlugs) {
+//   // Hide all plug divs initially
+//   plugs.forEach((plug) => {
+//     document.getElementById(plug.id).style.display = "none";
+//   });
+
+//   // Show only the suitable plugs
+//   suitablePlugs.forEach((plugId) => {
+//     document.getElementById(plugId).style.display = "block";
+//   });
+
+//   // Display the result section if there are suitable plugs
+//   var resultadoDiv = document.getElementById("resultado");
+//   resultadoDiv.style.display = suitablePlugs.length > 0 ? "block" : "none";
+// }
+
 function calcularBuchas() {
-  var espessuraCarga = parseFloat(
-    document.getElementById("espessuraCarga").value
-  );
+  // Commented out the load thickness retrieval
+  // var espessuraCarga = parseFloat(
+  //   document.getElementById("espessuraCarga").value
+  // );
   var pesoCarga = parseFloat(document.getElementById("pesoCarga").value);
   var suitablePlugs = [];
 
-  // Check if input fields are empty
-  if (isNaN(espessuraCarga) || isNaN(pesoCarga)) {
-    alert("Por favor, preencha ambos os campos de entrada.");
+  // Check if input field is empty
+  if (isNaN(pesoCarga)) {
+    alert("Por favor, preencha o campo de peso.");
     return; // Exit the function if fields are empty
   }
 
-  // Find suitable plugs
+  // Find suitable plugs based on weight and wall type
   plugs.forEach((plug) => {
-    if (
-      pesoCarga >= plug.weightRange[0] &&
-      pesoCarga <= plug.weightRange[1] &&
-      espessuraCarga * 4 <= plug.length
-    ) {
-      console.log(`Poderá ver a ${plug.model} - ${plug.dimensions}`);
+    // Condition based only on weight range
+    if (pesoCarga >= plug.weightRange[0] && pesoCarga <= plug.weightRange[1]) {
       suitablePlugs.push(plug.id);
     }
   });
 
   // Check if no suitable plugs were found
   if (suitablePlugs.length === 0) {
-    alert("Nenhuma bucha adequada foi encontrada com os valores fornecidos.");
+    alert("Nenhuma bucha adequada foi encontrada com o peso fornecido.");
   }
 
-  // Update display
   atualizarExibicaoBuchas(suitablePlugs);
 }
 
@@ -220,7 +266,6 @@ function atualizarExibicaoBuchas(suitablePlugs) {
     document.getElementById(plugId).style.display = "block";
   });
 
-  // Display the result section if there are suitable plugs
   var resultadoDiv = document.getElementById("resultado");
   resultadoDiv.style.display = suitablePlugs.length > 0 ? "block" : "none";
 }

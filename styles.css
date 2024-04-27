@@ -7,31 +7,25 @@ body {
 body {
   background-color: #80c080;
 
-  /* Adicione os seguintes estilos para criar o fundo interativo */
   background-image: url("bricolage.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
-.logo{
+.logo {
   width: 60%;
   margin: 0 auto;
 }
 
 .container {
-  /* Altere a cor de fundo da div `container` para branco */
   background-color: white;
-  /* Adicione os seguintes estilos para animar os bonecos */
   transition: all 0.5s ease;
 }
 
 .bucha {
-  /* Altere a cor de fundo da div `bucha` para branco */
   background-color: white;
-  /* Adicione os seguintes estilos para animar os bonecos */
   transition: all 0.5s ease;
-  /* Altere a posição dos bonecos para que eles fiquem na frente do fundo */
   z-index: 1;
 }
 
@@ -46,13 +40,10 @@ body {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   background-color: #f2f2f2;
   padding: 20px;
   text-align: center;
-  font-size: 12px;
+  font-size: 18px;
   color: #666;
 }
 
